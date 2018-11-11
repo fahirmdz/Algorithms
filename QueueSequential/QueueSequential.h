@@ -37,8 +37,10 @@ public:
 	}
 
 	T remove() {
-		if (isEmpty())
-			throw exception("Queue is empty..\n");
+		if (isEmpty()) {
+			cout << "Queue is empty..\n";
+			return NULL;
+		}
 		T value = N[start++];
 		counter--;
 		if (start == max)
@@ -49,12 +51,16 @@ public:
 
 	void print() {
 		cout << "\nQUEUE: ";
-		int i = start, b = 0;
-		while (b < counter) {
-			cout << "{" << N[i++] << "} ";
-			b++;
-			if (i == max)
-				i = 0;
+		if (isEmpty())
+			cout << "--EMPTY--\n";
+		else {
+			int i = start, b = 0;
+			while (b < counter) {
+				cout << "{" << N[i++] << "} ";
+				b++;
+				if (i == max)
+					i = 0;
+			}
 		}
 	}
 };
