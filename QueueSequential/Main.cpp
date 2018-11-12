@@ -15,19 +15,8 @@ void main() {
 
 	qs.add(10);
 	qs.print();
-	int x = qs.remove();
-	if (x != NULL)
-		cout << "\n\nRemoved -> " << x << " from queue..";
 	
-	 x = qs.remove();
-	if (x != NULL)
-		cout << "\n\nRemoved -> " << x << " from queue..";
 
-	 x = qs.remove();
-	if (x != NULL)
-		cout << "\n\nRemoved -> " << x << " from queue..";
-
-     x = qs.remove();  //empty queue
-	if (x != NULL)
-		cout << "\n\nRemoved -> " << x << " from queue..";
+	while (!qs.isEmpty())
+		cout << "Removed -> " << qs.remove() << " from queue..\n";
 }

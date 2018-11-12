@@ -38,9 +38,8 @@ public:
 
 	T remove() {
 		if (isEmpty()) {
-			cout << "Queue is empty..\n";
-			return NULL;
-		}
+			throw exception("Queue is empty..\n");
+
 		T value = N[start++];
 		counter--;
 		if (start == max)
