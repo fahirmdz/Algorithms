@@ -7,18 +7,19 @@ void main() {
 
 	//testing functions
 
-	QueueLinked<int> ql;
+	Queue<int> *ql = new QueueLinked<int>;
 
-	ql.add(1);
-	ql.print();
+	ql->add(1);
+	ql->print();
 	cout << endl;
-	ql.add(5);
-	ql.print();
+	ql->add(5);
+	ql->print();
 	cout << endl;
-	ql.add(8);
-	ql.print();
+	ql->add(8);
+	ql->print();
 	cout << endl;
-	while (!ql.isEmpty())
-		cout << "\nRemoved -> " << ql.remove() << "from queue..\n";
+
+	while (!ql->isEmpty())
+		cout << "\nRemoved -> " << ql->remove() << "from queue..\n";
 	
 }
