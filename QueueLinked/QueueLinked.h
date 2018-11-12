@@ -25,10 +25,9 @@ public:
 	}
 
 	T remove() {
-		if (isEmpty()){
-			cout << "Queue is empty..\n";
-			return NULL;
-	}
+		if (isEmpty())
+			throw exception("Queue is empty..\n");
+
 			Node<T> *t = start;
 			start = start->getNext();
 			T x = t->getInfo();

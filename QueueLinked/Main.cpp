@@ -18,24 +18,7 @@ void main() {
 	ql.add(8);
 	ql.print();
 	cout << endl;
-	int x = ql.remove();
-	if (x != NULL)
-		cout << "\nRemoved -> " << x << "from queue..\n";
-	x = ql.remove();
-	if (x != NULL)
-		cout << "Removed -> " << x << " from queue..\n";
-	x = ql.remove();
-	if (x != NULL)
-		cout << "Removed -> " << x << " from queue..\n";
-	x = ql.remove(); //empty queue
-	if (x != NULL)
-		cout << "Removed -> " << x << " from queue..\n";
-	x = ql.remove(); //empty queue
-	if (x != NULL)
-		cout << "Removed -> " << x << " from queue..\n";
-	x = ql.remove(); //empty queue
-	if (x != NULL)
-		cout << "Removed -> " << x << " from queue..\n";
-
-	ql.print();
+	while (!ql.isEmpty())
+		cout << "\nRemoved -> " << ql.remove() << "from queue..\n";
+	
 }
