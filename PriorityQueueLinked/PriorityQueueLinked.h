@@ -9,6 +9,7 @@ private:
 	Node<T> *first;
 
 public:
+	PriorityQueueLinked(){ first=nullptr;}
 	void add(T x) {
 		Node<T> *temp = new Node<T>(x, first);
 		if (first == nullptr) {
