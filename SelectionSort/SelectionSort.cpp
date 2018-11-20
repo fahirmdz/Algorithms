@@ -15,11 +15,8 @@ void selectionSort(T Niz[], int n) {
 		for (j = i + 1; j < n; j++)  
 			if (Niz[j] < Niz[minIndex]) 
 				minIndex = j; 
-		if (minIndex != i) {
-			pom = Niz[i];  
-			Niz[i] = Niz[minIndex];  
-			Niz[minIndex] = pom; 
-		} 
+		if (minIndex != i)
+			swap(Niz[i], Niz[minIndex]);
 	}
 }
 template<class T>
