@@ -2,17 +2,17 @@
 
 #include"pch.h"
 #include"BinarySearchTraversals.h"
-using namespace std;  
+using namespace std;
 
-void printDescribe(int x1,int x2) {
-	
-		cout << endl;
-		for (int i = 0; i < x1; i++)
-			cout << "-";
-		cout << "ROOT";
-		for (int i = 0; i < x2; i++)
-			cout << "-";
-		cout << endl << endl;
+void printDescribe(int x1, int x2) {
+
+	cout << endl;
+	for (int i = 0; i < x1; i++)
+		cout << "-";
+	cout << "ROOT";
+	for (int i = 0; i < x2; i++)
+		cout << "-";
+	cout << endl << endl;
 
 }
 void main() {
@@ -34,11 +34,11 @@ void main() {
 	bts.Add(87);
 	bts.Add(80);
 
-	//===============Binary tree IN ORDER=================
+	//===============Binary tree IN ORDER (DFS)=================
 	cout << "Binary tree In Order (recursion): ";
 	for (int i = 0; i < 16; i++)
 		cout << BinarySearchTraversals<int>::InOrder_R(bts)->get(i) << " ";
-	printDescribe(51,24);
+	printDescribe(51, 24);
 
 	cout << "Binary tree In Order (iteration, queue): ";
 	for (int i = 0; i < 16; i++)
@@ -46,7 +46,7 @@ void main() {
 	printDescribe(58, 25);
 	//=====================================================
 
-	//=============Binary tree PRE ORDER===================
+	//=============Binary tree PRE ORDER (DFS)===================
 	cout << "Binary tree Pre Order (recusrsion): ";
 	for (int i = 0; i < 16; i++)
 		cout << BinarySearchTraversals<int>::PreOrder_R(bts)->get(i) << " ";
@@ -58,7 +58,7 @@ void main() {
 	printDescribe(41, 42);
 	//====================================================
 
-	//============Binary tree POST ORDER==================
+	//============Binary tree POST ORDER (DFS)==================
 	cout << "Binary tree Post Order (recursion): ";
 	for (int i = 0; i < 16; i++)
 		cout << BinarySearchTraversals<int>::PostOrder_R(bts)->get(i) << " ";
@@ -67,6 +67,12 @@ void main() {
 	cout << "Binary tree Post Order (iteration, queue): ";
 	for (int i = 0; i < 16; i++)
 		cout << BinarySearchTraversals<int>::PostOrder_I(bts)->get(i) << " ";
-	printDescribe(85,0);
+	printDescribe(85, 0);
+	//==================================================
+
+	cout << "Binary tree Level Order (BFS): ";
+	for (int i = 0; i < 16; i++)
+		cout << BinarySearchTraversals<int>::LevelOrder_I(bts)->get(i) << " ";
+	printDescribe(30, 42);
 	//==================================================
 }

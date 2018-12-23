@@ -7,7 +7,7 @@
 template<class Key>
 class BinarySearchTraversals {
 
-	BinarySearchTraversals(){}
+	BinarySearchTraversals() {}
 
 	static void recursion_PostOrder(BSNode<Key>* &node, List<Key>* list) {
 		if (node != nullptr) {
@@ -112,7 +112,7 @@ public:
 		return list;
 	}
 
-	static List<Key>* LeverOrder_I(BinaryTree<Key>& tree) {
+	static List<Key>* LevelOrder_I(BinaryTree<Key>& tree) {
 		List<Key>* list = new ListLinked<Key>;
 		QueueLinked<BSNode<Key>*> queue;
 		queue.add(tree.root);
