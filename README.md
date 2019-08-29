@@ -1,1 +1,1 @@
-// Algorithms (C++)
+// Algorithms and data structures (C++)
